@@ -1,0 +1,36 @@
+{
+  "name": "squirrel",
+  "version": "1.0.0",
+  "description": "Testing suite that uses acorn parser to parse JavaScript code and allows tests based on the returned data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cptran777/squirrel.git"
+  },
+  "keywords": [
+    "squirrel",
+    "acorn",
+    "parse",
+    "javascript"
+  ],
+  "author": "Charlie Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cptran777/squirrel/issues"
+  },
+  "homepage": "https://github.com/cptran777/squirrel#readme",
+  "dependencies": {
+    "acorn": "^4.0.3",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2"
+  }
+}
