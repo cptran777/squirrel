@@ -76,7 +76,70 @@ const searchTreeAll = (syntaxTree, terms) => {
 
 /********************* MAIN API OBJECT *********************/
 
-const squirrel = {};
+const squirrel = {
+  
+  // Starts the testing chain by using acorn to parse code:
+  parse: (code) => {
+
+  	const syntaxTree = parse(code);
+
+  	// Returns whether the parsed code includes the term(s) passed in
+  	// term can be an array or string
+  	const include = (term) => {
+
+  	  term = asArray(term);
+
+  	  // Returns a simple true or false for now until figure out
+  	  // what exactly should happen
+  	  return searchTreeAll(syntaxTree, term);
+
+  	};
+
+  	// Starts a chain where code is expected to include a term with
+  	// something else. Term should be a string
+  	const includeWith = (term) => {
+
+  	  let possibleNodes = searchTreeFind(syntaxTree, term);
+
+  	  const nested = (nestedTerm) => {
+  	  	
+  	  	if (possibleNodes.length < 1) {
+  	  	  return false;
+  	  	}
+
+  	  	for (let x = 0; x < possibleNodes.length; x++) {
+  	  	  if (searchTreeSome(possibleNodes[x], nestedTerm)) {
+  	  	  	return true;
+  	  	  }
+  	  	}
+
+  	  	return false;
+
+  	  };
+
+  	  return { nested };
+
+  	};
+
+  	const should = {
+  	  include,
+  	  includeWith, 
+
+  	  not: {
+  	  	include: (term) => {
+  	  	  return !include(term);
+  	  	},
+  	  	includeWith: (nestedTerm) => {
+  	  	  return !includeWith(nestedTerm);
+  	  	}
+  	  }
+  	}
+
+  	return { should };
+
+  }
+  
+};
 
 export default squirrel;
 
