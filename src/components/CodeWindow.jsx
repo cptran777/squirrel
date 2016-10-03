@@ -1,6 +1,6 @@
 import React from 'react';
 
-import squirrel from './lib/squirrel';
+import squirrel from '../lib/squirrel';
 
 class CodeWindow extends React.component {
   

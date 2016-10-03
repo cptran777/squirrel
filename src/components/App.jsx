@@ -11,7 +11,7 @@ import CodeWindow from './CodeWindow';
 class App extends React.component {
 
   constructor() {
-
+  	super(props);
   }
 
   render() {
