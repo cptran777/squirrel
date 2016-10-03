@@ -1,6 +1,8 @@
 # squirrel
 A testing suite that uses acorn parser to parse JavaScript code and allows tests based on returned data.
 
+Test suite is in alpha
+
 ## Documentation
 
 `parse(string)` Parse returns an object that can be chained with `should`. Parse uses the acorn parser and therefore takes a string that is JavaScript code. 
