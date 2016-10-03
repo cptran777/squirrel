@@ -1,0 +1,30 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+.myapp {
+  height: 100%;
+}
+
+.instructions {
+  height: 100%;
+  border: 1px solid #100;
+}
+
+.codewindow {
+  height: 100%;
+  border: 1px solid #100;
+}
+
+.codetext {
+  height: 50%;
+  width: 90%;
+}

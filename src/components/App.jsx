@@ -8,15 +8,20 @@ import CodeWindow from './CodeWindow';
 /********************** MAIN OBJECT ************************/
 
 // Main application component
-class App extends React.component {
+class App extends React.Component {
 
-  constructor() {
+  constructor(props) {
   	super(props);
   }
 
   render() {
   	return (
-  	  <div></div>
+  	  <div className="myapp">
+  	    <div className="row">
+  	  	  <Instructions />
+  	  	  <CodeWindow />
+  	  	</div>
+  	  </div>
   	);
   }
 
