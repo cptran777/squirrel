@@ -15,12 +15,12 @@ body {
 }
 
 .instructions {
-  height: 100%;
+  height: 600px;
   border: 1px solid #100;
 }
 
 .codewindow {
-  height: 100%;
+  height: 600px;
   border: 1px solid #100;
 }
 
