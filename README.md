@@ -3,6 +3,17 @@ A testing suite that uses acorn parser to parse JavaScript code and allows tests
 
 Test suite is in alpha
 
+## Installation
+
+For dependencies: 
+`npm install`
+
+To create consolidated script file:
+`webpack`
+
+Webpack may need to be installed globally before with 
+`npm install webpack -g`
+
 ## Documentation
 
 `parse(string)` Parse returns an object that can be chained with `should`. Parse uses the acorn parser and therefore takes a string that is JavaScript code. 
