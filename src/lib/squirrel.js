@@ -1,7 +1,9 @@
 /******************* IMPORT DEPENDENCIES *******************/
 
 import { parse } from '../../node_modules/acorn/dist/acorn.js';
-import { asArray } from './util';
+import util from './util';
+
+const asArray = util.asArray;
 
 /******************** HELPER FUNCTIONS *********************/
 
@@ -138,7 +140,7 @@ const squirrel = {
   	return { should };
 
   }
-  
+
 };
 
 export default squirrel;
